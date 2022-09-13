@@ -1,10 +1,33 @@
 package patterns;
-
-public class Pattern {
+class Pattern {}
+class P18{
+    public static void main(String[] args) {
+        for(int i = 1; i <= 5; i++) {
+            if(i!= 1 && i!=5) {
+                System.out.print("*"+" "+" "+"*");
+            }
+            else {
+                for(int j = 1; j <= 4; j++) {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
 }
 class P17 {
     public static void main(String[] args) {
-        
+        for(int r = 1; r <= 4; r++) {
+            for(int s = 1; s <= (4-r); s++) {
+                System.out.print(" ");
+            }
+            int i = 0;
+            for(int p = 4-r+1; p < (4+r); p++) {//D:\DSAGFG\Array\RemoveDuplicate.java
+                System.out.print((char)(65+i));
+                i++;
+            }
+            System.out.println();
+        }
     }
 }
 class P16 {
