@@ -75,7 +75,28 @@ class E {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int t = in.nextInt();
-        System.out.println("Bro it was very easy question");
-
+        while(t-- > 0) {
+            int n = in.nextInt();
+            int[] arr = new int[n];
+            for(int i = 0; i< n; i++) {
+                arr[i] = in.nextInt();
+            }
+            int min = arr[0];
+            int max = arr[0];
+            for(int i = 1; i < n; i++) {
+                if(arr[i] >= max)
+                    max = arr[i];
+                else if(arr[i] < min)
+                    min = arr[i];
+            }
+            if((min>=0) && (max>=0))
+                System.out.println((long)(min*min) + " " + (long)(max*max));
+            else if((max<=0) && (min <=0))
+                System.out.println((long)(max*max) + " " + (long)(min*min));
+            else {
+                System.out.println((long)(min*min)>(long)(max*max)?(long)(min*min):(long)(max*max));
+                System.out.println((long)(min*max));
+            }
+        }
     }
 }
