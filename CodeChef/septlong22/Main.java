@@ -75,6 +75,6 @@ class E {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int t = in.nextInt();
-        System.out.println();
+        System.out.println("was easy question");
     }
 }
