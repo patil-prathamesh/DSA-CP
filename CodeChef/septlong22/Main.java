@@ -77,25 +77,25 @@ class E {
         int t = in.nextInt();
         while(t-- > 0) {
             int n = in.nextInt();
-            int[] arr = new int[n];
-            for(int i = 0; i< n; i++) {
-                arr[i] = in.nextInt();
+            int x = in.nextInt();
+            long min = x;
+            long max = x;
+            for(int i = 0; i < n-1; i++) {
+                int y = in.nextInt();
+                if(y >= max)
+                    max = y;
+                else if(y <= min)
+                    min = y;
             }
-            int min = arr[0];
-            int max = arr[0];
-            for(int i = 1; i < n; i++) {
-                if(arr[i] >= max)
-                    max = arr[i];
-                else if(arr[i] < min)
-                    min = arr[i];
+            if(min == 0) {
+                System.out.println((min*min) + " " + (max*max));
             }
-            if((min>=0) && (max>=0))
-                System.out.println((long)(min*min) + " " + (long)(max*max));
-            else if((max<=0) && (min <=0))
-                System.out.println((long)(max*max) + " " + (long)(min*min));
+            else if((min<0) && (max<0))
+                System.out.println(min + " " + (max*max));
+            else if((min < 0) && (max > 0))
+                System.out.println((min*max) + " " + (max*max));
             else {
-                System.out.println((long)(min*min)>(long)(max*max)?(long)(min*min):(long)(max*max));
-                System.out.println((long)(min*max));
+                System.out.println();
             }
         }
     }
