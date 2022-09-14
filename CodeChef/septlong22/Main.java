@@ -73,30 +73,6 @@ class D {
 }
 class E {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int t = in.nextInt();
-        while(t-- > 0) {
-            int n = in.nextInt();
-            int x = in.nextInt();
-            long min = x;
-            long max = x;
-            for(int i = 0; i < n-1; i++) {
-                int y = in.nextInt();
-                if(y >= max)
-                    max = y;
-                else if(y <= min)
-                    min = y;
-            }
-            if(min == 0) {
-                System.out.println((min*min) + " " + (max*max));
-            }
-            else if((min<0) && (max<0))
-                System.out.println(min + " " + (max*max));
-            else if((min < 0) && (max > 0))
-                System.out.println((min*max) + " " + (max*max));
-            else {
-                System.out.println();
-            }
-        }
+
     }
 }
