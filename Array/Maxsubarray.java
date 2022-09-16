@@ -24,5 +24,6 @@ public class Maxsubarray {
             ans = Math.max(ans,maxEnding);
         }
         return ans;
+
     }
 }
